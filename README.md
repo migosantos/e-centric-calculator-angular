@@ -1,4 +1,4 @@
-# ECentricCalculatorAngular
+# E-Centric-Calculator (Angular)
 
 ## Installing dependecies
 
