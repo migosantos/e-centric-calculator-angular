@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ScreenComponent } from './screen.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('ScreenComponent', () => {
   let component: ScreenComponent;
@@ -8,7 +10,8 @@ describe('ScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScreenComponent ]
+      declarations: [ ScreenComponent ],
+      imports: [ FormsModule, BrowserModule ]
     })
     .compileComponents();
   }));
@@ -18,7 +21,7 @@ describe('ScreenComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });

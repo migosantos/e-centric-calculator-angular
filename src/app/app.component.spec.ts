@@ -1,12 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { NumPadComponent } from './calculator/num-pad/num-pad.component';
+import { ScreenComponent } from './calculator/screen-display/screen.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        CalculatorComponent,
+        NumPadComponent,
+        ScreenComponent
       ],
+      imports: [ FormsModule ]
     }).compileComponents();
   }));
 
@@ -16,16 +25,5 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'e-centric-calculator-angular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('e-centric-calculator-angular');
-  });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to e-centric-calculator-angular!');
-  });
 });

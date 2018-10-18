@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angular/core';
-import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-screen',
@@ -9,7 +8,7 @@ import {FormsModule} from '@angular/forms';
 export class ScreenComponent implements OnInit {
 
   @Input()
-  display: string;
+  screenDisplay: string;
 
   @Output()
   onChangeDisplay: EventEmitter<string> = new EventEmitter<string>();
@@ -21,11 +20,11 @@ export class ScreenComponent implements OnInit {
   }
   
   private initDisplaySummary() : void {
-    this.display = '';
+    this.screenDisplay = '';
   }
 
   modelChanged(newInput: string) {
-    this.display = newInput;
-    this.onChangeDisplay.emit(this.display);
+    this.screenDisplay = newInput;
+    this.onChangeDisplay.emit(this.screenDisplay);
   } 
 }
