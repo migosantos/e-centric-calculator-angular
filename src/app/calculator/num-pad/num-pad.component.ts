@@ -40,7 +40,7 @@ export class NumPadComponent implements OnInit {
     this.onClickUnaryOperator.emit(oper);
   }
 
-  computeClicked(oper: string) {
+  computeClicked() {
     this.onClickCompute.emit();
   }
 
