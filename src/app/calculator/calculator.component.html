@@ -1,0 +1,11 @@
+    <app-screen 
+      [display]="display" 
+      (onChangeDisplay)="onChangeDisplay($event)">
+    </app-screen>
+    
+    <app-num-pad 
+      (onKeyStroke)="onKeyStroke($event)" 
+      (onClickCompute)="onClickCompute()"
+      (onClickClear)="onClickClear()"
+      (onClickUnaryOperator)="onClickUnaryOperator($event)">
+    </app-num-pad>

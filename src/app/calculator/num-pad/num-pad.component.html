@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <button (click)="numberClicked(7)">7</button>
+      <button (click)="numberClicked(8)">8</button>
+      <button (click)="numberClicked(9)">9</button>
+      <button class="oper" (click)="operationClicked('+')">+</button>
+      <button class="oper" (click)="operationClicked('^')">^</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <button (click)="numberClicked(4)">4</button>
+      <button (click)="numberClicked(5)">5</button>
+      <button (click)="numberClicked(6)">6</button>
+      <button class="oper" (click)="operationClicked('-')">-</button>
+      <button class="oper" (click)="unaryOperationClicked('sqrt')"><span class="radic">
+          &radic;<span class="overline">&nbsp;X&nbsp;</span>
+          </span></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <button (click)="numberClicked(1)">1</button>
+      <button (click)="numberClicked(2)">2</button>
+      <button (click)="numberClicked(3)">3</button>
+      <button class="oper" (click)="operationClicked('/')">/</button>
+      <button class="oper" (click)="computeClicked()">=</button>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <button (click)="numberClicked('.')">.</button>
+      <button (click)="numberClicked(0)">0</button>
+      <button class="cancel" (click)="clearClicked()">C</button>
+      <button class="oper" (click)="operationClicked('*')">*</button>
+    </div>
+  </div>
+</div>
